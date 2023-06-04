@@ -1,8 +1,8 @@
-# KuaiSAR: An Unified Search and Recommendation Dataset
+# KuaiSAR: A Unified Search and Recommendation Dataset
 
 [![LICENSE](https://img.shields.io/badge/license-CC%20BY--SA%204.0-green)](https://github.com/chongminggao/KuaiRand/blob/main/LICENSE)
 
-*KuaiSAR* is unified search and recommendation dataset collected from the genuine user behavior logs of the short-video mobile app, [Kuaishou (快手)](https://www.kuaishou.com/en).  
+*KuaiSAR* is a unified search and recommendation dataset collected from the genuine user behavior logs of the short-video mobile app, [Kuaishou (快手)](https://www.kuaishou.com/en), a leading short-video app in China with over 300 million daily active users.  
 **It is the first dataset which records genuine user behaviors, the occurrence of each interaction within either search or recommendation service, and the users' transitions between the two services!** 
 <!-- *KuaiRand* is an unbiased sequential recommendation dataset collected from the recommendation logs of the video-sharing mobile app, [Kuaishou (快手)](https://www.kuaishou.com/cn).  **It is the first recommendation dataset with millions of  intervened interactions of randomly exposed items inserted in the standard recommendation feeds!**  -->
 
@@ -49,3 +49,45 @@ Work in progress.
 Please wait.
 
 ---
+
+## Data Descriptions:
+
+File organization:
+
+```bash
+  KuaiSR
+  ├── rec_inter.csv          
+  ├── src_inter.csv
+  ├── social_network.csv
+  ├── user_features.csv
+  ├── video_features.csv
+  └── search_features.csv
+```
+
+#### Statistics:
+Work in progress.
+Please wait.
+
+#### 1. Descriptions of the fields in rec_inter.csv
+
+| Field Name:	  | Description  | Type  |Example|
+|---|---|---|---|
+|  user_id | The ID of the user.  | int64   | 6302591 |
+|  video_id |  The ID of the viewed video.   |  int64 |103656000000|
+| playing_time  | Time of video viewing of this interaction (millisecond).  | float64  | 60792.0  |
+|duration_ms| Time of this video (millisecond).  |float64   |  45400.0 |
+
+
+#### 2. Descriptions of the fields in src_inter.csv
+
+#### 3. Descriptions of the fields in social_network.csv
+
+#### 4. Descriptions of the fields in user_features.csv
+
+#### 5. Descriptions of the fields in video_features.csv
+
+#### 6. Descriptions of the fields in search_features.csv
+
+
+
+
