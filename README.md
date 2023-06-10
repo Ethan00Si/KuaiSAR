@@ -1,7 +1,5 @@
 # KuaiSAR
 
-[![LICENSE](https://img.shields.io/badge/license-CC%20BY--SA%204.0-green)](https://github.com/chongminggao/KuaiRand/blob/main/LICENSE)
-
 *KuaiSAR* is a unified search and recommendation dataset collected from the genuine user behavior logs of the short-video mobile app, [Kuaishou (快手)](https://www.kuaishou.com/en), a leading short-video app in China with over 300 million daily active users.  
 **It is the first dataset which records genuine user behaviors, the occurrence of each interaction within either search or recommendation service, and the users' transitions between the two services!** 
 <!-- *KuaiRand* is an unbiased sequential recommendation dataset collected from the recommendation logs of the video-sharing mobile app, [Kuaishou (快手)](https://www.kuaishou.com/cn).  **It is the first recommendation dataset with millions of  intervened interactions of randomly exposed items inserted in the standard recommendation feeds!**  -->
@@ -11,9 +9,12 @@
 
 ## Overview:
 
-The following image provides an example for this dataset. It depicts two historical sequences of interactions from a user in the Kuaishou app, involving both search and recommendation services.
+As shown in the following figure, Kuaishou provides both search and recommendation services.
+As users scroll down the screen, they can discover new recommended short videos that they may be interested in.
+When users click on the magnifying glass, they can enter the main search page and use the search engine to find videos of interest.
 
 <!-- ![kuaidata](https://cdn.chongminggao.top/figure/KuaiRand-homepage.png) -->
+![kuaidata](./assests/fig/intro1.png)
 
 From the user's perspective, the boundary between search and recommendation services may not be distinct. Users experience a unified service that combines both search and recommendation functionalities.
 In the recommendation service, there exist several designs that prompt users to transition into the search service. Similarly, in the search service, various recommended queries are presented to stimulate users to engage in further searching.
@@ -26,23 +27,38 @@ In the recommendation service, there exist several designs that prompt users to 
 
 Compared with other existing datasets, KuaiSAR has the following advantages:
 
-- ✅ It is the first dataset with user genuine search and recommendation behaviros.
-- ✅ It has all user-system interactions in search and recommendation scenarios, including interactions of both postive and negative feedback.
-- ✅ It has diverse side information including explicit user IDs, interaction timestamps, and rich features for users and items.
-- ✅ Each user has thousands of historical interactions on average.
+- ✅ It is the first dataset with user genuine search and recommendation behaviors. 
+- ✅ It documents the sources of users' search behaviors, such as actively typing-in searches and clicking on recommended queries.
+- ✅ It comprehensively captures users' transitions between search and recommendation services, such as documenting whether users initiate a search while watching a video within the recommendation system.
+- ✅ It provides abundant side information for both users and items.
+- ✅ It logs users' authentic interactions, including both positive and negative feedback.
 
 If you find it helpful, please cite our paper:
  [![LINK](https://img.shields.io/badge/-Paper%20Link-lightgrey)](https://arxiv.org/abs/not_found) [![PDF](https://img.shields.io/badge/-PDF-red)](https://arxiv.org/pdf/not_found.pdf)
 
 ```
 @inproceedings{2023kuaiSAR,
-  title = {KuaiSAR: placeholder} ,
-  author = {placeholder},
-  url = {https://doi.org/10.1145/not_found},
-  doi = {10.1145/not_found},
+  title = {KuaiSAR: A Unified Search And Recommendation Dataset} ,
+  author = {work in progress},
+  url = {https://doi.org/10.1145/work in progress},
+  doi = {work in progress},
   year = {2023},
 }
 ```
+
+## License
+
+[![CC BY-NC-SA 4.0][cc-by-nc-sa-shield]][cc-by-nc-sa]
+
+This work is licensed under a
+[Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License][cc-by-nc-sa].
+
+[![CC BY-NC-SA 4.0][cc-by-nc-sa-image]][cc-by-nc-sa]
+
+[cc-by-nc-sa]: http://creativecommons.org/licenses/by-nc-sa/4.0/
+[cc-by-nc-sa-image]: https://licensebuttons.net/l/by-nc-sa/4.0/88x31.png
+[cc-by-nc-sa-shield]: https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg
+
 
 ## Download the data:
 
