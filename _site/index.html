@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>KuaiSAR | A Unified Search And Recommendation Dataset</title>
+<meta name="generator" content="Jekyll v3.9.3" />
+<meta property="og:title" content="KuaiSAR" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="A Unified Search And Recommendation Dataset" />
+<meta property="og:description" content="A Unified Search And Recommendation Dataset" />
+<link rel="canonical" href="http://localhost:4000/" />
+<meta property="og:url" content="http://localhost:4000/" />
+<meta property="og:site_name" content="KuaiSAR" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="KuaiSAR" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","description":"A Unified Search And Recommendation Dataset","headline":"KuaiSAR","name":"KuaiSAR","url":"http://localhost:4000/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="/assets/css/style.css?v=945ae28758de152d0f1d2fd7176b4a7d7863b37a">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+  </head>
+  <body>
+    <a id="skip-to-content" href="#content">Skip to the content.</a>
+
+    <header class="page-header" role="banner">
+      <h1 class="project-name">KuaiSAR</h1>
+      <h2 class="project-tagline">A Unified Search And Recommendation Dataset</h2>
+      
+        <a href="https://github.com/Ethan00Si/KuaiSAR" class="btn">View on GitHub</a>
+      
+      
+    </header>
+
+    <main id="content" class="main-content" role="main">
+      <h1 id="kuaisar">KuaiSAR</h1>
+
+<p><em>KuaiSAR</em> is a unified search and recommendation dataset containing the genuine user behavior logs collected from the short-video mobile app, <a href="https://www.kuaishou.com/en">Kuaishou (快手)</a>, a leading short-video app in China with over 300 million daily active users. <br />
+<strong>It is the first dataset which records genuine user behaviors, the occurrence of each interaction within either search or recommendation service, and the users’ transitions between the two services!</strong></p>
+
+<h2 id="overview">Overview:</h2>
+
+<p>As shown in the following figure, Kuaishou provides both search and recommendation services.
+The figure illustrates integrated search and recommendation scenarios in Kuaishou app. 
+When watching a video, the user can either scroll up and down to browse different videos with the recommendation service (from middle to left); or
+tap on the magnifying glass to access the search service (from middle to right).</p>
+
+<p><img src="/assets/fig/intro1.png" alt="kuaidata" /></p>
+
+<p>From the user’s perspective, the boundary between search and recommendation services may not be distinct. 
+Users experience a unified service that combines both search and recommendation functionalities.
+In the recommendation service, as illustrated in the figures below (a. and b.), there exist several designs that prompt users to transition into the search service. 
+Similarly, in the search service, as shown in the figures below (c. and d.), various recommended queries are presented to stimulate users to engage in further searching.</p>
+
+<p><img src="/assets/fig/intro2.png" alt="kuaidata" /></p>
+
+<h3 id="advantages">Advantages:</h3>
+
+<p>Compared with other existing datasets, KuaiSAR has the following advantages:</p>
+
+<ul>
+  <li>✅ It is the first dataset with user genuine search and recommendation behaviors.</li>
+  <li>✅ It documents the sources of users’ search behaviors, such as actively typing-in searches and clicking on recommended queries.</li>
+  <li>✅ It comprehensively captures users’ transitions between search and recommendation services, such as documenting whether users initiate a search while watching a video within the recommendation system.</li>
+  <li>✅ It provides abundant side information for both users and items.</li>
+  <li>✅ It logs users’ authentic interactions, including both positive and negative feedback.</li>
+</ul>
+
+<h3 id="statistics">Statistics</h3>
+
+<p>Basic statistics are summarized as follows:</p>
+<style>
+table {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+</style>
+
+<table>
+  <thead>
+    <tr>
+      <th>Dataset</th>
+      <th>#Users</th>
+      <th>#Items</th>
+      <th>#Queries</th>
+      <th>#Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>S-data</td>
+      <td>25,877</td>
+      <td>2,012,476</td>
+      <td>267,608</td>
+      <td>3,171,231</td>
+    </tr>
+    <tr>
+      <td>R-data</td>
+      <td>25,877</td>
+      <td>2,281,034</td>
+      <td>–</td>
+      <td>7,493,101</td>
+    </tr>
+    <tr>
+      <td>Total</td>
+      <td>25,877</td>
+      <td>4,195,529</td>
+      <td>267,608</td>
+      <td>10,664,332</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The short descriptions for each feature filed are listed as below. Please refer to this <a href="./detailed_statistics.html">page</a> for more details and examples.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th><strong>Feature</strong>:</th>
+      <th>Detailed Descriptions.</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>User&amp;Item feature</strong>:</td>
+      <td>Users and items have abundant side information. 5 (18) features for users (items).</td>
+    </tr>
+    <tr>
+      <td><strong>S-action feature</strong>:</td>
+      <td>S-actions have 9 features, e.g., search session IDs, query keywords, and sources of entering the search service.</td>
+    </tr>
+    <tr>
+      <td><strong>R-action feature</strong>:</td>
+      <td>R-actions has 12 features, including 9 types of user feedback, e.g., likes, follows, and entering search.</td>
+    </tr>
+    <tr>
+      <td><strong>Social network</strong>:</td>
+      <td>576 users have friends.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="download-the-data">Download the data:</h2>
+
+<p>Work in progress.
+Please wait.</p>
+
+<h2 id="citation">Citation</h2>
+
+<p>If you find it helpful, please cite our paper:
+ <a href="https://arxiv.org/abs/not_found"><img src="https://img.shields.io/badge/-Paper%20Link-lightgrey" alt="LINK" /></a> <a href="https://arxiv.org/pdf/not_found.pdf"><img src="https://img.shields.io/badge/-PDF-red" alt="PDF" /></a></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@inproceedings{2023kuaiSAR,
+  title = {KuaiSAR: A Unified Search And Recommendation Dataset} ,
+  author = {work in progress},
+  url = {https://doi.org/10.1145/work in progress},
+  doi = {work in progress},
+  year = {2023},
+}
+</code></pre></div></div>
+
+<h2 id="license">License</h2>
+
+<p><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg" alt="CC BY-NC-SA 4.0" /></a></p>
+
+<p>This work is licensed under a
+<a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.</p>
+
+<p><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://licensebuttons.net/l/by-nc-sa/4.0/88x31.png" alt="CC BY-NC-SA 4.0" /></a></p>
+
+
+
+      <footer class="site-footer">
+        
+          <span class="site-footer-owner"><a href="https://github.com/Ethan00Si/KuaiSAR">KuaiSAR</a> is maintained by <a href="https://github.com/Ethan00Si">Ethan00Si</a>.</span>
+        
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+      </footer>
+    </main>
+  </body>
+</html>
