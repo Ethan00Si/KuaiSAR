@@ -28,7 +28,8 @@ Similarly, in the search service, as shown in the figures below (c. and d.), var
 
 ![kuaidata](../assets/fig/intro2.png)
 
-
+The other two related datasets are: [KuaiRec](https://kuairec.com/) and [KuaiRand](https://kuairand.com/).
+ 
 ### Advantages:
 
 Compared with other existing datasets, KuaiSAR has the following advantages:
@@ -40,6 +41,9 @@ Compared with other existing datasets, KuaiSAR has the following advantages:
 - ✅ It logs users' authentic interactions, including both positive and negative feedback.
 
 ### Statistics
+
+Here we show some basic statistics.
+Check this page for more detailed [Descriptions and Analytics](./detailed_statistics.html).
 
 KuaiSAR contains genuine search and recommendation behaviors of 25,877 users within a span of 9 days on the Kuaishou app.
 This dataset filters users based on a single condition: that users have used both search and recommendation services within the specified time period.
@@ -71,21 +75,37 @@ The short descriptions for each feature filed are listed as below. Please refer 
 
 ## Download the data:
 
-Work in progress.
-Please wait.
+KuaiSAR has been shared at [zendo](https://zenodo.org/).
+
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.8031220.svg)](https://doi.org/10.5281/zenodo.8031220)
+
+OPTION 1. Download via your browser:
+
+You can download the dataset from this [page](https://zenodo.org/record/8031220).
+
+OPTION 2: Download via the 'wget' command tool:
+
+```bash
+wget https://zenodo.org/record/8031220/files/KuaiSAR.zip
+
+unzip KuaiSAR.zip
+```
+
 
 ## Citation
 
+
 If you find it helpful, please cite our paper:
- [![LINK](https://img.shields.io/badge/-Paper%20Link-lightgrey)](https://arxiv.org/abs/not_found) [![PDF](https://img.shields.io/badge/-PDF-red)](https://arxiv.org/pdf/not_found.pdf)
+ [![LINK](https://img.shields.io/badge/-Paper%20Link-lightgrey)](https://arxiv.org/abs/2306.07705) [![PDF](https://img.shields.io/badge/-PDF-red)](https://arxiv.org/pdf/2306.07705.pdf)
 
 ```
-@inproceedings{2023kuaiSAR,
-  title = {KuaiSAR: A Unified Search And Recommendation Dataset} ,
-  author = {work in progress},
-  url = {https://doi.org/10.1145/work in progress},
-  doi = {work in progress},
-  year = {2023},
+@misc{sun2023kuaisar,
+      title={KuaiSAR: A Unified Search And Recommendation Dataset}, 
+      author={Zhongxiang Sun and Zihua Si and Xiaoxue Zang and Dewei Leng and Yanan Niu and Yang Song and Xiao Zhang and Jun Xu},
+      year={2023},
+      eprint={2306.07705},
+      archivePrefix={arXiv},
+      primaryClass={cs.IR}
 }
 ```
 
