@@ -14,18 +14,36 @@ tap on the magnifying glass to access the search service (from middle to right).
 
 ![kuaidata](./assets/fig/intro1.png)
 
+## Download the data:
+
+KuaiSAR has been shared at [https://zenodo.org/](https://zenodo.org/record/8031220).
+
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.8031220.svg)](https://doi.org/10.5281/zenodo.8031220)
+
+OPTION 1. Download via your browser:
+
+You can download the dataset from this [link](https://zenodo.org/record/8031220).
+
+OPTION 2: Download via the 'wget' command tool:
+
+```bash
+wget https://zenodo.org/record/8031220/files/KuaiSAR.zip
+
+unzip KuaiSAR.zip
+```
+
 ## Citation
 
 If you find it helpful, please cite our paper:
  [![LINK](https://img.shields.io/badge/-Paper%20Link-lightgrey)](https://arxiv.org/abs/not_found) [![PDF](https://img.shields.io/badge/-PDF-red)](https://arxiv.org/pdf/not_found.pdf)
 
 ```
-@inproceedings{2023kuaiSAR,
-  title = {KuaiSAR: A Unified Search And Recommendation Dataset} ,
-  author = {work in progress},
-  url = {https://doi.org/10.1145/work in progress},
-  doi = {work in progress},
-  year = {2023},
+@article{Sun2023KuaiSAR,
+  title={KuaiSAR: A Unified Search And Recommendation Dataset},
+  author={Zhongxiang Sun and Zihua Si and Xiaoxue Zang and Dewei Leng and Yanan Niu and Yang Song and Xiao Zhang and Jun Xu},
+  journal={ArXiv},
+  year={2023},
+  volume={abs/2306.07705}
 }
 ```
 
