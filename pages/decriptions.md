@@ -71,7 +71,8 @@ File organization:
 | Field Name         | Description                               | Type  | Example |
 | ------------------ | ----------------------------------------- | ----- | ------- |
 | user_id            | The ID of the user.                       | int64 | 6302 |
-| search_active_level| Search active level of the user.          | int64 | 1       |
+| search_active_level| Search activity level of the user.          | int64 | 1       |
+| rec_active_level| Recommendation activity level of the user.          | int64 | 1       |
 | onehot_feat1       | An encrypted feature. Range: {0, 1, 2}    | int64 | 1       |
 | onehot_feat2       | An encrypted feature. Range: {0, 1, …, 7} | int64 | 3       |
 
