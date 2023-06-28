@@ -78,7 +78,7 @@ File organization:
 
 
 
-#### 5. Descriptions of the fields in video_features.csv
+#### 5. Descriptions of the fields in item_features.csv
 
 | Field Name                   | Description                                                      | Type      | Example     |
 | ---------------------------- | ---------------------------------------------------------------- | --------- | ----------- |
