@@ -46,7 +46,7 @@ Here we show some basic statistics.
 Check this page for more detailed [Descriptions and Analytics](./detailed_statistics.html).
 
 KuaiSAR contains genuine search and recommendation behaviors of 25,877 users within a span of 9 days on the Kuaishou app.
-This dataset filters users based on a single condition: that users have used both search and recommendation services within the specified time period.
+This dataset filters users based on a single condition: that users have used both search and recommendation services within the specified time period ranging from 2023/5.22 14:50 to 2023/5.31 14:50. 
 As a result, the final dataset encompasses users with diverse levels of activity in either the search or recommendation services, thereby offering a comprehensive representation of users with varying degrees of engagement.
 Basic statistics of this dataset are summarized as follows:
 <style>

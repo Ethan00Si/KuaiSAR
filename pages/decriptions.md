@@ -36,8 +36,10 @@ File organization:
 | forward              | Whether the user forwards the item.                          | int64     | 1             |
 | like                 | Whether the user likes the item.                             | int64     | 1             |
 | follow               | Whether the user follows the author of from the item.        | int64     | 1             |
-| search               | Whether the user searches while watching the item.           | int64     | 1             |
-| search_item_related  | Whether the user has searched for content related to the item.| int64     | 1             |
+| search               | Whether the user actively searches while watching items in the recomendation system.           | int64     | 1             |
+| search_item_related  | Whether the content that users search for related to the currently watched video. | int64     | 1             |
+
+It is important to note that the 'search_item_related' label is only valid when 'search' is equal to 1. Additionally, both labels only consider the user's active search behavior by clicking on the magnifying glass icon, without taking into account passive search behavior such as clicking on recommended queries in the comment section.
 
 
 #### 2. Descriptions of the fields in src_inter.csv
@@ -55,6 +57,9 @@ File organization:
 | item_type              | Item type of the shown item ("VIDEO", 'USER', 'IMAGE_ATLAS', 'LIVE', 'COMMODITY', 'MUSIC', 'ADVERT'). | string | VIDEO           |
 
 
+It is important to note that we define a user's search behavior as a search session, which includes issuing a query and providing feedback on the returned results. Within a search session, a user may click on multiple items after searching a query or may choose not to click on any item.
+
+Furthermore, the search engine may return results that include items not present in the recommendation system. The recommendation system only recommends items with item_type "VIDEO" or "IMAGE_ATLAS" to users, while the search engine may return other types of items such as live streams ("LIVE") or user profiles ("USER").
 
 #### 3. Descriptions of the fields in social_network.csv
 
