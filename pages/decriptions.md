@@ -121,10 +121,11 @@ The activity level is determined by the number of active days within the past mo
 A higher activity level indicates a larger number of active days.
 The results are illustrated as follows:
 
-<div style="display: flex;">
+<!-- <div style="display: flex;">
     <img src="../assets/fig/reco_analysis.png" style="width: 50%;" />
     <img src="../assets/fig/search_analysis.png" style="width: 50%;" />
-</div>
+</div> -->
+![](../assets/fig/analysis.png){:width="90%"}
 
 
 The average number of search or recommendation historical behaviors per user is over one hundred.  The overall interaction frequency with the recommendation service surpasses that with the search service. Furthermore, we observed that within the groups with either the lowest or highest activity levels in recommendations, as well as within the group with high search activity, there is a higher proportion of search interactions.
