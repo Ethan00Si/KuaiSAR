@@ -46,9 +46,33 @@ Here we show some basic statistics.
 Check this page for more detailed [Descriptions and Analytics](./detailed_statistics.html).
 
 KuaiSAR contains genuine search and recommendation behaviors of 25,877 users within a span of 9 days on the Kuaishou app.
-This dataset filters users based on a single condition: that users have used both search and recommendation services within the specified time period ranging from 2023/5.22 14:50 to 2023/5.31 14:50. 
+This dataset filters users based on a single condition: that users have used both search and recommendation services within the specified time period ranging from 2023/5.22 14:30 to 2023/6.10 9:30. 
+<!-- This dataset filters users based on a single condition: that users have used both search and recommendation services within the specified time period ranging from 2023/5.22 14:50 to 2023/5.31 14:50.  -->
 As a result, the final dataset encompasses users with diverse levels of activity in either the search or recommendation services, thereby offering a comprehensive representation of users with varying degrees of engagement.
-Basic statistics of this dataset are summarized as follows:
+Basic statistics of this dataset in the are summarized as follows:
+
+**KuaiSAR**
+<style>
+table {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+</style>
+
+| Dataset | #Users  | #Items    | #Queries | #Actions    |
+|---------|---------|------------|---------|------------|
+| S-data  | 25,877  | 3,026,189 | 453,667   | 5,059,169   |
+| R-data  | 25,877  | 4,046,367 | -       | 14,605,716 |
+| Total   | 25,877  | 6,890,707 | 453,667   | 19,664,885 |
+
+where the 'S' and 'R' denote search and recommendation respectively.
+
+
+In order to facilitate researchers to conduct experiments more quickly, we have also released a smaller version of the data.
+*The difference is that KuaiSAR contains data from 2023/5/22 14:30 to 2023/6/10 9:30, while KuaiSAR-small only contains data from 2023/5/22 14:50 to 2023/5/31 14:50.*
+
+**KuaiSAR-small**
 <style>
 table {
   width: 80%;
@@ -75,18 +99,34 @@ The short descriptions for each feature filed are listed as below. Please refer 
 
 ## Download the data:
 
-KuaiSAR has been shared at [https://zenodo.org/](https://zenodo.org/record/8031220).
+KuaiSAR has been shared at [https://zenodo.org/record/8181109](https://zenodo.org/record/8181109).
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.8031220.svg)](https://doi.org/10.5281/zenodo.8031220)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.8181109.svg)](https://doi.org/10.5281/zenodo.8181109)
 
 OPTION 1. Download via your browser:
 
-You can download the dataset from this [link](https://zenodo.org/record/8031220).
+You can download the dataset from this [link](https://zenodo.org/record/8181109).
+
+**Note:**
+
+* The 'KuaiSAR_v2.zip' file is for the **KuaiSAR** dataset.
+* The 'KuaiSAR.zip' file is for the **KuaiSAR-small** dataset.
+
+The screenshot of the data download page:
+![](../assets/fig/data_file.png)
 
 OPTION 2: Download via the 'wget' command tool:
 
+For the **KuaiSAR** dataset:
 ```bash
-wget https://zenodo.org/record/8031220/files/KuaiSAR.zip
+wget https://zenodo.org/record/8181109/files/KuaiSAR_v2.zip
+
+unzip KuaiSAR_v2.zip
+```
+
+For the **KuaiSAR-small** dataset:
+```bash
+wget https://zenodo.org/record/8181109/files/KuaiSAR.zip
 
 unzip KuaiSAR.zip
 ```

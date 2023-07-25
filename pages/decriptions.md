@@ -39,7 +39,9 @@ File organization:
 | search               | Whether the user actively searches while watching items in the recomendation system.           | int64     | 1             |
 | search_item_related  | Whether the content that users search for related to the currently watched video. | int64     | 1             |
 
-It is important to note that the 'search_item_related' label is only valid when 'search' is equal to 1. Additionally, both labels only consider the user's active search behavior by clicking on the magnifying glass icon, without taking into account passive search behavior such as clicking on recommended queries in the comment section.
+For recommendation actions, the ratio of data with click=0 and click=1 is approximately 1:1. We recommend using 'click' to distinguish positive and negative samples.
+
+It is important to note that the 'search_item_related' label is only valid when 'search' is equal to 1. Additionally, both 'search_item_related' and 'search' only consider the user's active search behavior by clicking on the magnifying glass icon, without taking into account other search behavior such as clicking on recommended queries in the comment section.
 
 
 #### 2. Descriptions of the fields in src_inter.csv
@@ -57,7 +59,8 @@ It is important to note that the 'search_item_related' label is only valid when 
 | item_type              | Item type of the shown item ("VIDEO", 'USER', 'IMAGE_ATLAS', 'LIVE', 'COMMODITY', 'MUSIC', 'ADVERT'). | string | VIDEO           |
 
 
-It is important to note that we define a user's search behavior as a search session, which includes issuing a query and providing feedback on the returned results. Within a search session, a user may click on multiple items after searching a query or may choose not to click on any item.
+It is important to note that we define a user's search behavior as a search session, which includes issuing a query and providing feedback on the returned results. Within a search session, a user may click on multiple items after searching a query or may choose not to click on any item. Approximately 60% of the search sessions in this dataset include click behavior, meaning there is at least one item with click=1.
+The user behaviors of searching without clicking may be due to the auto-play feature of the KuaiShou app. In some cases, after the video auto-plays and satisfies the user's information needs, the user exits the search system.
 
 Furthermore, the search engine may return results that include items not present in the recommendation system. The recommendation system only recommends items with item_type "VIDEO" or "IMAGE_ATLAS" to users, while the search engine may return other types of items such as live streams ("LIVE") or user profiles ("USER").
 
@@ -68,6 +71,7 @@ Furthermore, the search engine may return results that include items not present
 | user_id         | The ID of the user.                               | int64 | 19270 |
 | user_follow_id  | ID of the user followed by the current user.      | int64 | 19270 |
 
+'user_follow_id' only contains users who have appeared in this dataset.
 
 
 #### 4. Descriptions of the fields in user_features.csv
@@ -107,4 +111,20 @@ Furthermore, the search engine may return results that include items not present
 | fourth_level_category_name_en| English name of the fourth level category for the item           | string    | empty       |
 
 
+## Analysis
 
+This dataset filters users based on a single condition: that users have used both S\&R services  within the specified time period.
+As a result, the final dataset encompasses users with diverse levels of activity in either the search or recommendation services, thereby offering a comprehensive representation of users with varying degrees of engagement.
+To illustrate the number of S\&R behaviors among users with different activity levels, we counted the number of user-video interactions within two services respectively.
+We have grouped users based on their activity levels in the search or recommendation services. 
+The activity level is determined by the number of active days within the past month using the respective service. 
+A higher activity level indicates a larger number of active days.
+The results are illustrated as follows:
+
+<div style="display: flex;">
+    <img src="../assets/fig/reco_analysis.png" style="width: 50%;" />
+    <img src="../assets/fig/search_analysis.png" style="width: 50%;" />
+</div>
+
+
+The average number of search or recommendation historical behaviors per user is over one hundred.  The overall interaction frequency with the recommendation service surpasses that with the search service. Furthermore, we observed that within the groups with either the lowest or highest activity levels in recommendations, as well as within the group with high search activity, there is a higher proportion of search interactions.

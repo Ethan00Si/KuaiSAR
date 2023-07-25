@@ -16,26 +16,41 @@ tap on the magnifying glass to access the search service (from middle to right).
 
 ## Download the data:
 
-KuaiSAR has been shared at [https://zenodo.org/](https://zenodo.org/record/8031220).
+KuaiSAR has been shared at [https://zenodo.org/record/8181109](https://zenodo.org/record/8181109).
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.8031220.svg)](https://doi.org/10.5281/zenodo.8031220)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.8181109.svg)](https://doi.org/10.5281/zenodo.8181109)
 
 OPTION 1. Download via your browser:
 
-You can download the dataset from this [link](https://zenodo.org/record/8031220).
+You can download the dataset from this [link](https://zenodo.org/record/8181109).
+
+**Note:**
+
+* The 'KuaiSAR_v2.zip' file is for the **KuaiSAR** dataset.
+* The 'KuaiSAR.zip' file is for the **KuaiSAR-small** dataset.
+![](../assets/fig/data_file.png)
 
 OPTION 2: Download via the 'wget' command tool:
 
+For the **KuaiSAR** dataset:
 ```bash
-wget https://zenodo.org/record/8031220/files/KuaiSAR.zip
+wget https://zenodo.org/record/8181109/files/KuaiSAR_v2.zip
+
+unzip KuaiSAR_v2.zip
+```
+
+For the **KuaiSAR-small** dataset:
+```bash
+wget https://zenodo.org/record/8181109/files/KuaiSAR.zip
 
 unzip KuaiSAR.zip
 ```
 
+
 ## Citation
 
 If you find it helpful, please cite our paper:
- [![LINK](https://img.shields.io/badge/-Paper%20Link-lightgrey)](https://arxiv.org/abs/not_found) [![PDF](https://img.shields.io/badge/-PDF-red)](https://arxiv.org/pdf/not_found.pdf)
+ [![LINK](https://img.shields.io/badge/-Paper%20Link-lightgrey)](https://arxiv.org/abs/2306.07705) [![PDF](https://img.shields.io/badge/-PDF-red)](https://arxiv.org/pdf/2306.07705.pdf)
 
 ```
 @article{Sun2023KuaiSAR,
