@@ -28,8 +28,8 @@ File organization:
 | -------------------- | ------------------------------------------------------------ | --------- | ------------- |
 | user_id              | The ID of the user.                                          | int64     | 1             |
 | item_id              | The ID of the viewed item.                                   | int64     | 1             |
-| playing_time         | Time of item viewing of this interaction (millisecond).      | float64   | 60792.0       |
-| duration_ms          | Time of this item (millisecond).                             | float64   | 45400.0       |
+| playing_time         | The duration this video(item) has been played by this user (millisecond).      | float64   | 60792.0       |
+| duration_ms          | The total duration of this video (millisecond).                             | float64   | 45400.0       |
 | time                 | Human-readable date for this interaction (China,  Beijing time zone) | timestamp | 2023-05-22 15:53:20 |
 | timestamp            | Unix timestamp (millisecond).                                | float64   | 1.684742e+12  |
 | click                | Whether the user clicks the item.                            | int64     | 1             |
@@ -61,6 +61,7 @@ It is important to note that the 'search_item_related' label is only valid when 
 
 It is important to note that we define a user's search behavior as a search session, which includes issuing a query and providing feedback on the returned results. Within a search session, a user may click on multiple items after searching a query or may choose not to click on any item. Approximately 60% of the search sessions in this dataset include click behavior, meaning there is at least one item with click=1.
 The user behaviors of searching without clicking may be due to the auto-play feature of the KuaiShou app. In some cases, after the video auto-plays and satisfies the user's information needs, the user exits the search system.
+If, during usage, it's desired that each session has at least one clicked item, you can choose the earliest appearing item in this session, as it's an automatically played video.
 
 Furthermore, the search engine may return results that include items not present in the recommendation system. The recommendation system only recommends items with item_type "VIDEO" or "IMAGE_ATLAS" to users, while the search engine may return other types of items such as live streams ("LIVE") or user profiles ("USER").
 
@@ -94,9 +95,9 @@ Furthermore, the search engine may return results that include items not present
 | item_id                      | The ID of the item.                                              | int64     | 1           |
 | caption                      | The caption of the item after anonymization.                     | list      | [1, 213, 24]|
 | author_id                    | The ID of the author (0 is padding).                                             | int64     | 10          |
-| item_type                    | The type of the item.                                            | string    | NORMAL      |
+| item_type                    | The type of the item, e.g., normal video and ads.                                          | string    | NORMAL      |
 | upload_time                  | The upload datetime of the item (human readable: China,  Beijing time zone, 1970-1-1 is padding). | timestamp | 2023-04-22  |
-| upload_type                  | Type of item uploaded.                                           | string    | LongImport  |
+| upload_type                  | Type of how the item uploaded.                                         | string    | LongImport  |
 | first_level_category_id      | ID of the first level category for the item                      | int64     | 9           |
 | first_level_category_name    | Name of the first level category for the item                    | string    | 搞笑         |
 | first_level_category_name_en | English name of the first level category for the item            | string    | Funny       |
@@ -110,6 +111,8 @@ Furthermore, the search engine may return results that include items not present
 | fourth_level_category_name   | Name of the fourth level category for the item                   | string    | 空           |
 | fourth_level_category_name_en| English name of the fourth level category for the item           | string    | empty       |
 
+The four categories are labels obtained through classifying the content of items from coarser to finer granularity.
+Not every item can ensure having four levels of categories. Some items only possess relatively coarse-grained category labels.
 
 ## Analysis
 
