@@ -41,6 +41,8 @@ File organization:
 
 For recommendation actions, the ratio of data with click=0 and click=1 is approximately 1:1. We recommend using 'click' to distinguish positive and negative samples.
 
+Please note: The "time" and "timestamp" in this table refer to the time when the system distributes items to users. Typically, the system sends multiple items to users at once, which can result in interactions between the user and some items having the same timestamp.
+
 It is important to note that the 'search_item_related' label is only valid when 'search' is equal to 1. Additionally, both 'search_item_related' and 'search' only consider the user's active search behavior by clicking on the magnifying glass icon, without taking into account other search behavior such as clicking on recommended queries in the comment section.
 
 
