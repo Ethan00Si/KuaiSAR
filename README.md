@@ -56,9 +56,10 @@ If you find it helpful, please cite our paper:
 @article{Sun2023KuaiSAR,
   title={KuaiSAR: A Unified Search And Recommendation Dataset},
   author={Zhongxiang Sun and Zihua Si and Xiaoxue Zang and Dewei Leng and Yanan Niu and Yang Song and Xiao Zhang and Jun Xu},
-  journal={ArXiv},
+  booktitle={Proceedings of the 32nd ACM International Conference on Information and Knowledge Management},
+  url = {https://doi.org/10.1145/3583780.3615123},
+  doi = {10.1145/3583780.3615123},
   year={2023},
-  volume={abs/2306.07705}
 }
 ```
 
