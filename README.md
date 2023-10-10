@@ -49,8 +49,8 @@ unzip KuaiSAR.zip
 
 ## Citation
 
-If you find it helpful, please cite our paper:
- [![LINK](https://img.shields.io/badge/-Paper%20Link-lightgrey)](https://arxiv.org/abs/2306.07705) [![PDF](https://img.shields.io/badge/-PDF-red)](https://arxiv.org/pdf/2306.07705.pdf)
+If you find it helpful, please cite our paper (
+ [![LINK](https://img.shields.io/badge/-Paper%20Link-lightgrey)](https://arxiv.org/abs/2306.07705) [![PDF](https://img.shields.io/badge/-PDF-red)](https://arxiv.org/pdf/2306.07705.pdf)) or cite our website (https://kuaisar.github.io/)
 
 ```
 @article{Sun2023KuaiSAR,
